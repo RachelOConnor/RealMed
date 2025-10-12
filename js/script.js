@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     throw new Error('Form submission failed');
                 }
             } catch (error) {
-                alert('Oops! Something went wrong. Please try again or email us directly at info@realmedsolutions.ie');
+                alert('Oops! Something went wrong. Please try again or email us directly at info@realmed.ie');
             } finally {
                 submitBtn.textContent = originalBtnText;
                 submitBtn.disabled = false;
