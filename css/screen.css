@@ -184,10 +184,12 @@ body {
 
 /* Feature Sections */
 .feature-section {
-    height: 75vh;
+    min-height: 500px;
+    max-height: 700px;
+    height: clamp(500px, 60vh, 700px);
     display: flex;
     align-items: center;
-    margin-bottom: -40px;
+    margin-bottom: 0;
     position: relative;
     overflow: hidden;
 }
@@ -195,7 +197,7 @@ body {
 .feature-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 60vh;
+    height: clamp(450px, 50vh, 600px);
     width: 100%;
 }
 
@@ -522,7 +524,7 @@ body {
 
     /* Feature Sections */
     .feature-section {
-        margin-bottom: -70px;
+        margin-bottom: 0;
     }
     
     .feature-content {
