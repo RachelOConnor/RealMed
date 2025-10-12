@@ -154,6 +154,11 @@
     filter: brightness(0);
 }
 
+.contact-social-info {
+    flex: 1;
+    min-width: 0;
+}
+
 .contact-social-info h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
@@ -167,6 +172,9 @@
     font-size: 16px;
     color: #cccccc;
     margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .contact-social-item:hover .contact-social-info p {
