@@ -33,17 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (ctaButton) {
         ctaButton.addEventListener('click', function() {
-            const contactSection = document.querySelector('#contact');
-
-            if (contactSection) {
-                contactSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            } else {
-                // If no contact section, you could open a modal or redirect
-                alert('Contact functionality would be implemented here');
-            }
+            window.location.href = 'contact.html';
         });
     }
 
@@ -226,6 +216,71 @@ document.addEventListener('DOMContentLoaded', function() {
             word.style.animation = `fadeInUp 0.6s ease-out ${0.5 + (index * 0.2)}s both`;
         });
     }
+
+    // =================================
+    // CONTACT FORM SUBMISSION
+    // =================================
+    
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('.form-submit-btn');
+            const originalBtnText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'SENDING...';
+            submitBtn.disabled = true;
+            
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Show success modal
+                    showModal();
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                alert('Oops! Something went wrong. Please try again or email us directly at info@realmedsolutions.ie');
+            } finally {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+    
+    // Modal functions
+    window.showModal = function() {
+        const modal = document.getElementById('successModal');
+        if (modal) {
+            modal.classList.add('show');
+        }
+    }
+    
+    window.closeModal = function() {
+        const modal = document.getElementById('successModal');
+        if (modal) {
+            modal.classList.remove('show');
+        }
+    }
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('successModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 
     // =================================
     // UTILITY FUNCTIONS

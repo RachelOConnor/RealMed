@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RealMed Solutions</title>
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logos/LOGO-SHORT.png" alt="RMS Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-background">
+            <img src="assets/imgs/Contact.jpg" alt="Contact Us" class="contact-hero-img">
+        </div>
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title">CONTACT US</h1>
+                <p class="contact-hero-subtitle">Let's Talk Training</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Intro Section -->
+    <section class="contact-intro">
+        <div class="container">
+            <div class="contact-intro-content">
+                <p class="contact-intro-text">Ready to experience TECC training that prepares you for the real world? Whether you're interested in an accredited course, a private training programme at your facility, or consultancy solutions, we're here to help.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Links Section -->
+    <section class="contact-social">
+        <div class="container">
+            <h2 class="contact-social-title">CONNECT WITH US</h2>
+            <div class="contact-social-grid">
+                <a href="mailto:info@realmedsolutions.ie" class="contact-social-item">
+                    <div class="contact-social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7l-10 7L2 7"/>
+                        </svg>
+                    </div>
+                    <div class="contact-social-info">
+                        <h3>Email</h3>
+                        <p>info@realmedsolutions.ie</p>
+                    </div>
+                </a>
+
+                <a href="#" class="contact-social-item">
+                    <div class="contact-social-icon">
+                        <img src="assets/icons/FACEBOOK-ICON.png" alt="Facebook">
+                    </div>
+                    <div class="contact-social-info">
+                        <h3>Facebook</h3>
+                        <p>Follow us on Facebook</p>
+                    </div>
+                </a>
+
+                <a href="#" class="contact-social-item">
+                    <div class="contact-social-icon">
+                        <img src="assets/icons/X-ICON.png" alt="Twitter">
+                    </div>
+                    <div class="contact-social-info">
+                        <h3>Twitter</h3>
+                        <p>Follow us on Twitter</p>
+                    </div>
+                </a>
+
+                <a href="#" class="contact-social-item">
+                    <div class="contact-social-icon">
+                        <img src="assets/icons/LINKEDIN-ICON.png" alt="LinkedIn">
+                    </div>
+                    <div class="contact-social-info">
+                        <h3>LinkedIn</h3>
+                        <p>Connect on LinkedIn</p>
+                    </div>
+                </a>
+
+                <a href="#" class="contact-social-item">
+                    <div class="contact-social-icon">
+                        <img src="assets/icons/INSTA-ICON.png" alt="Instagram">
+                    </div>
+                    <div class="contact-social-info">
+                        <h3>Instagram</h3>
+                        <p>Follow us on Instagram</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-intro">
+                <p>Or simply complete our quick contact form below, and one of our team will be in touch.</p>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="11e70a8f-f958-48e4-a964-ac314dd54733">
+                <input type="hidden" name="subject" value="New Contact Form Submission from RealMed Solutions">
+                <input type="hidden" name="from_name" value="RealMed Solutions Contact Form">
+                
+                <h2 class="contact-form-title">CONTACT FORM</h2>
+                
+                <div id="form-message" class="form-message"></div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="organisation">Organisation / Company</label>
+                    <input type="text" id="organisation" name="organisation">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="interest">I'm Interested In *</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Please select...</option>
+                        <option value="accredited-course">Accredited TECC Course</option>
+                        <option value="private-training">Private Training Programme</option>
+                        <option value="consultancy">Consultancy Solutions</option>
+                        <option value="general">General Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn">SEND MESSAGE</button>
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Statement -->
+    <section class="contact-closing">
+        <div class="container">
+            <p class="contact-closing-text">Bring high-fidelity, accredited TECC training to your team today.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logos/LOGO-BIG.png" alt="RealMed Solutions Logo" class="footer-logo-img">
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <a href="index.html" class="footer-link">HOME</a>
+                    <a href="about.html" class="footer-link">ABOUT US</a>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/icons/LINKEDIN-ICON.png" alt="LinkedIn" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/icons/FACEBOOK-ICON.png" alt="Facebook" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/icons/INSTA-ICON.png" alt="Instagram" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/icons/X-ICON.png" alt="X (Twitter)" class="social-icon-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Popup Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6L9 17l-5-5"/>
+                </svg>
+            </div>
+            <h2 class="modal-title">Message Sent!</h2>
+            <p class="modal-text">Thank you for contacting us. We'll be in touch soon.</p>
+            <button class="modal-close-btn" onclick="closeModal()">CLOSE</button>
+        </div>
+    </div>
+
+    <script src="js/script.js?v=3"></script>
+</body>
+</html>
+
