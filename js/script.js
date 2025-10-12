@@ -4,6 +4,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // =================================
+    // PAGE TRANSITIONS
+    // =================================
+    const pageLinks = document.querySelectorAll('a[href$=".html"], .nav-link, .footer-link');
+    
+    pageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Only apply transition for internal page links (not #anchors or external links)
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto:')) {
+                e.preventDefault();
+                
+                // Add fade out animation
+                document.body.classList.add('page-transition-out');
+                
+                // Navigate after animation completes
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 150); // Match the fadeOutPage animation duration
+            }
+        });
+    });
+    
+    // =================================
     // SMOOTH SCROLLING FOR ALL PAGES
     // =================================
     const links = document.querySelectorAll('a[href^="#"]');
@@ -32,8 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctaButton = document.querySelector('.cta-button');
     
     if (ctaButton) {
-        ctaButton.addEventListener('click', function() {
-            window.location.href = 'contact.html';
+        ctaButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('page-transition-out');
+            setTimeout(() => {
+                window.location.href = 'contact.html';
+            }, 150);
         });
     }
 
