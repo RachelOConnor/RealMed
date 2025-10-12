@@ -350,7 +350,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
 }
 
 .footer-link {
@@ -364,7 +367,7 @@ body {
 }
 
 .footer-link:hover {
-    color: #C02222;
+    color: #351515;
 }
 
 .social-icons {
@@ -382,12 +385,14 @@ body {
     height: 50px;
     text-decoration: none;
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     padding: 8px;
 }
 
-.social-icon:hover {
-    background-color: #C3081F;
+@media (min-width: 769px) {
+    .social-icon:hover {
+        transform: scale(1.15);
+    }
 }
 
 .social-icon-img {
